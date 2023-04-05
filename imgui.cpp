@@ -3144,13 +3144,9 @@ static const ImGuiDataVarInfo GStyleVarInfo[] =
     { ImGuiDataType_Float, 1, (ImU32)IM_OFFSETOF(ImGuiStyle, TabRounding) },         // ImGuiStyleVar_TabRounding
     { ImGuiDataType_Float, 2, (ImU32)IM_OFFSETOF(ImGuiStyle, ButtonTextAlign) },     // ImGuiStyleVar_ButtonTextAlign
     { ImGuiDataType_Float, 2, (ImU32)IM_OFFSETOF(ImGuiStyle, SelectableTextAlign) }, // ImGuiStyleVar_SelectableTextAlign
-<<<<<<< HEAD
-    { ImGuiDataType_Float, 1, (ImU32)IM_OFFSETOF(ImGuiStyle, LayoutAlign) },         // ImGuiStyleVar_LayoutAlign
-=======
     { ImGuiDataType_Float, 1, (ImU32)IM_OFFSETOF(ImGuiStyle, SeparatorTextBorderSize) },// ImGuiStyleVar_SeparatorTextBorderSize
     { ImGuiDataType_Float, 2, (ImU32)IM_OFFSETOF(ImGuiStyle, SeparatorTextAlign) },     // ImGuiStyleVar_SeparatorTextAlign
     { ImGuiDataType_Float, 2, (ImU32)IM_OFFSETOF(ImGuiStyle, SeparatorTextPadding) },   // ImGuiStyleVar_SeparatorTextPadding
->>>>>>> short
 };
 
 const ImGuiDataVarInfo* ImGui::GetStyleVarInfo(ImGuiStyleVar idx)
@@ -3886,21 +3882,8 @@ void ImGui::SetActiveID(ImGuiID id, ImGuiWindow* window)
 {
     ImGuiContext& g = *GImGui;
 
-<<<<<<< HEAD
-
-    for (int i = 0; i < DC.Layouts.Data.Size; i++)
-    {
-        ImGuiLayout* layout = (ImGuiLayout*)DC.Layouts.Data[i].val_p;
-        IM_DELETE(layout);
-    }
-    // While most behaved code would make an effort to not steal active id during window move/drag operations,
-    // we at least need to be resilient to it. Cancelling the move is rather aggressive and users of 'master' branch
-    // may prefer the weird ill-defined half working situation ('docking' did assert), so may need to rework that.
-    if (g.MovingWindow != NULL && g.ActiveId == g.MovingWindow->MoveId)
-=======
     // Clear previous active id
     if (g.ActiveId != 0)
->>>>>>> short
     {
         // While most behaved code would make an effort to not steal active id during window move/drag operations,
         // we at least need to be resilient to it. Canceling the move is rather aggressive and users of 'master' branch

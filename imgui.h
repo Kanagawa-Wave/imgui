@@ -1707,13 +1707,9 @@ enum ImGuiStyleVar_
     ImGuiStyleVar_TabRounding,         // float     TabRounding
     ImGuiStyleVar_ButtonTextAlign,     // ImVec2    ButtonTextAlign
     ImGuiStyleVar_SelectableTextAlign, // ImVec2    SelectableTextAlign
-<<<<<<< HEAD
-    ImGuiStyleVar_LayoutAlign,         // float     LayoutAlign
-=======
     ImGuiStyleVar_SeparatorTextBorderSize,// float  SeparatorTextBorderSize
     ImGuiStyleVar_SeparatorTextAlign,  // ImVec2    SeparatorTextAlign
     ImGuiStyleVar_SeparatorTextPadding,// ImVec2    SeparatorTextPadding
->>>>>>> short
     ImGuiStyleVar_COUNT
 };
 
