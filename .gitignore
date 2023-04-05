@@ -65,7 +65,11 @@ bin/
 bin-int/
 
  # Files
+<<<<<<< HEAD
 Makefile 
+=======
+Makefile
+>>>>>>> short
 
 # Visual Studio files and folder
 *.sln
